@@ -49,4 +49,19 @@ class Calculator:
         self.entry.insert(tk.END, self.expression)
 
 
+        import math
+
+def calculate_root(number):
+    """
+    양의 실수의 제곱근을 계산하는 함수.
+    음수일 경우 사용자에게 안내 메시지를 반환.
+    """
+    if isinstance(number, (int, float)):
+        if number < 0:
+            return "음수는 루트를 구할 수 없음."
+        return round(math.sqrt(number), 3)
+    else:
+        return "숫자 입력: "
+
+
 
